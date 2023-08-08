@@ -2,8 +2,7 @@ import Banner from "./components/Banner";
 import Buttons from "./components/Buttons";
 import Table from "./components/Table";
 import { useState } from "react";
-import satDate from "./components/satData"
-
+import satData from "./components/satData"
 
 
 function App() {
@@ -24,7 +23,7 @@ function App() {
   );
 }
 
-const filterByType = (currentType) => {
+const filterByType = (currentType, setSat) => {
   const displaySats = satData.filter((newSatDisplay) => {
      return newSatDisplay.orbitType === currentType;
   });
